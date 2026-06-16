@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شيخ المطابخ | مصنع وتفصيل مطابخ · خميس مشيط وأبها</title>
+<meta name="description" content="شيخ المطابخ · مصنع وتفصيل مطابخ خشب وألمنيوم وأكريليك في خميس مشيط وأبها. تصميم وقياس وتصنيع وتركيب وصيانة بجودة عالية. تقييم 4.9 من 544 عميلاً على خرائط Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Qahiri&family=Tajawal:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14161a; --bg2:#1c1f24; --card:#22262c; --ink:#f0eee9; --soft:#a7a59f; --mut:#76746f;
+  --steel:#5b6470; --steel2:#7c8593; --amber:#c79a4f; --amber2:#dcb96f; --oak:#9a7350;
+  --line:#2e333a; --shadow:0 30px 70px -30px rgba(0,0,0,.7);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Qahiri',sans-serif;font-weight:400;line-height:1.3;letter-spacing:.01em}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.ey{font-family:'Tajawal';font-weight:800;letter-spacing:.22em;font-size:.7rem;color:var(--amber);text-transform:uppercase}
+
+#pre{position:fixed;inset:0;z-index:10000;background:#0f1114;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .7s ease,visibility .7s}
+#pre.done{opacity:0;visibility:hidden;display:none;pointer-events:none}
+#pre .pl{font-family:'Qahiri';color:var(--ink);font-size:1.8rem;letter-spacing:.04em}
+#pre .pl b{color:var(--amber2)}
+#pre .bar{width:120px;height:2px;background:rgba(255,255,255,.14);overflow:hidden;border-radius:2px}
+#pre .bar i{display:block;height:100%;width:38%;background:var(--amber2);animation:load 1.1s infinite}
+@keyframes load{0%{transform:translateX(-160%)}100%{transform:translateX(380%)}}
+
+.nav{position:fixed;top:0;inset-inline:0;z-index:900;padding:20px 0;transition:.4s}
+.nav.scz{background:rgba(20,22,26,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:13px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Qahiri';font-size:1.4rem}
+.brand b{color:var(--amber)}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{font-weight:500;font-size:.93rem;color:var(--ink);opacity:.8;transition:.25s}
+.menu a:hover{opacity:1;color:var(--amber2)}
+.menu a.nbtn{background:var(--amber);color:#1a1510;padding:11px 24px;border-radius:8px;font-weight:700;font-size:.86rem;opacity:1}
+.menu a.nbtn:hover{background:var(--amber2);transform:translateY(-2px)}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bgimg{position:absolute;inset:0;z-index:0}
+.hero .bgimg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,22,26,.55) 0%,rgba(20,22,26,.35) 40%,rgba(20,22,26,.96) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-block:0 8vh}
+.hero .ey{display:inline-block;margin-bottom:20px}
+.hero h1{font-size:clamp(2.4rem,6.4vw,4.8rem);margin-bottom:18px}
+.hero h1 .ac{color:var(--amber)}
+.hero .sub{font-size:1.14rem;color:var(--soft);max-width:46ch;margin-bottom:32px}
+.hcta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{padding:15px 32px;border-radius:8px;font-weight:700;font-size:.96rem;transition:.3s;display:inline-flex;align-items:center;gap:9px}
+.btn-p{background:var(--amber);color:#1a1510;box-shadow:0 16px 32px -16px rgba(199,154,79,.6)}
+.btn-p:hover{background:var(--amber2);transform:translateY(-3px)}
+.btn-o{border:1.5px solid rgba(240,238,233,.3);color:var(--ink)}
+.btn-o:hover{border-color:var(--amber);color:var(--amber2)}
+.hrate{display:flex;align-items:center;gap:10px;color:var(--soft);font-size:.92rem}
+.hrate b{font-family:'Qahiri';color:var(--amber2);font-size:1.5rem}
+.hrate .stars{color:var(--amber)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+.tags{background:var(--bg2);border-block:1px solid var(--line)}
+.tags .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:28px 0}
+.tags span{font-weight:500;font-size:.9rem;color:var(--soft);display:flex;align-items:center;gap:9px}
+.tags span::before{content:"◆";color:var(--amber);font-size:.7rem}
+
+section{padding:100px 0;position:relative}
+.shead{max-width:660px;margin-bottom:54px}
+.shead.ctr{margin-inline:auto;text-align:center}
+.shead h2{font-size:clamp(2rem,4.4vw,3rem);margin:14px 0}
+.shead p{color:var(--soft);font-size:1.05rem}
+
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.aimg{position:relative;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+.aimg img{width:100%;height:100%;object-fit:cover}
+.aimg::before{content:"";position:absolute;inset:0;border:1px solid rgba(199,154,79,.22);border-radius:14px;z-index:2;pointer-events:none}
+.about p.lead{font-size:1.14rem;color:var(--ink);margin-bottom:16px;font-weight:500}
+.about p.body{color:var(--soft);margin-bottom:16px}
+.sig{font-family:'Cormorant Garamond';font-style:italic;font-size:1.5rem;color:var(--amber2);margin-top:6px}
+.alist{list-style:none;margin-top:20px;display:grid;gap:12px}
+.alist li{display:flex;align-items:center;gap:12px;color:var(--ink);font-weight:500}
+.alist li::before{content:"✦";color:var(--amber)}
+
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.scard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 28px;position:relative;overflow:hidden;transition:.4s}
+.scard::before{content:"";position:absolute;top:0;inset-inline:0;height:3px;background:linear-gradient(90deg,var(--amber),transparent);transform:scaleX(0);transform-origin:right;transition:.4s}
+.scard:hover{transform:translateY(-7px);border-color:rgba(199,154,79,.3)}
+.scard:hover::before{transform:scaleX(1)}
+.scard .ic{font-size:1.6rem;margin-bottom:16px;color:var(--amber2)}
+.scard h3{font-size:1.18rem;margin-bottom:9px}
+.scard p{font-size:.94rem;color:var(--soft)}
+
+.work{background:var(--bg2)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+.pitem{position:relative;border-radius:12px;overflow:hidden;cursor:pointer}
+.pitem img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.pitem::after{content:attr(data-t);position:absolute;inset-block-end:0;inset-inline:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(10,11,13,.92));color:var(--ink);font-weight:600;font-size:.9rem;opacity:0;transform:translateY(8px);transition:.4s}
+.pitem:hover img{transform:scale(1.07)}
+.pitem:hover::after{opacity:1;transform:none}
+.pitem.big{grid-column:span 2;grid-row:span 2}
+.pitem.wide{grid-column:span 2}
+
+.stbar{background:var(--amber);color:#1a1510}
+.stbar .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;padding:50px 0}
+.st{text-align:center}
+.st b{font-family:'Qahiri';font-size:2.4rem;display:block;line-height:1}
+.st span{font-size:.86rem;opacity:.78;font-weight:500}
+
+.rev{background:var(--bg)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px 28px}
+.rcard .st-row{color:var(--amber);letter-spacing:2px;margin-bottom:14px}
+.rcard p{color:var(--ink);font-size:1rem;margin-bottom:18px}
+.rcard .who{display:flex;align-items:center;gap:12px}
+.rcard .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--oak),var(--amber));color:#1a1510;display:flex;align-items:center;justify-content:center;font-family:'Qahiri';font-size:1.05rem}
+.rcard .who b{font-size:.94rem}.rcard .who span{font-size:.78rem;color:var(--soft)}
+
+.cta{text-align:center;background:linear-gradient(180deg,var(--bg),#0d0f12)}
+.cta h2{font-size:clamp(2rem,4.8vw,3.1rem);margin-bottom:16px}
+.cta p{color:var(--soft);max-width:46ch;margin:0 auto 32px;font-size:1.06rem}
+.cta .hcta{justify-content:center}
+.cinfo{display:flex;gap:42px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.cinfo .lab{font-size:.72rem;letter-spacing:.2em;color:var(--amber);text-transform:uppercase;display:block;margin-bottom:4px;font-weight:800}
+.cinfo .val{font-size:1.04rem;font-weight:500}
+
+footer{background:#0d0f12;color:var(--soft);padding:46px 0 30px;text-align:center}
+.fbrand{font-family:'Qahiri';font-size:1.5rem;color:var(--ink);margin-bottom:10px}
+.fbrand b{color:var(--amber2)}
+footer .meta{font-size:.9rem;margin-bottom:22px}
+.fsig{border-top:1px solid var(--line);padding-top:20px;font-size:.85rem;color:rgba(167,165,159,.7)}
+.fsig a{font-family:'Cormorant Garamond';font-style:italic;font-size:1.18rem;color:var(--amber2)}
+
+.wa{position:fixed;inset-block-end:22px;inset-inline-start:22px;z-index:800;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);transition:.3s}
+.wa:hover{transform:scale(1.1)}.wa svg{width:30px;height:30px;fill:#fff}
+
+@media(max-width:900px){
+  .menu{position:fixed;inset-block:0 auto;inset-inline-end:0;top:0;height:100vh;width:74%;max-width:320px;background:var(--bg2);flex-direction:column;justify-content:center;gap:30px;transform:translateX(110%);transition:.45s;box-shadow:var(--shadow);z-index:950}
+  .menu.open{transform:none}
+  .burger{display:flex;z-index:960}
+  .agrid{grid-template-columns:1fr;gap:38px}
+  .sgrid,.rgrid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .pitem.big{grid-column:span 2;grid-row:span 1}.pitem.wide{grid-column:span 2}
+}
+@media(max-width:520px){.pgrid{grid-template-columns:1fr;grid-auto-rows:200px}.pitem.big,.pitem.wide{grid-column:span 1}.cinfo{gap:24px}}
+</style>
+</head>
+<body>
+<div id="pre"><div class="pl">شيخ <b>المطابخ</b></div><div class="bar"><i></i></div></div>
+
+<nav class="nav" id="nav"><div class="wrap">
+  <a href="#home" class="brand">شيخ المطابخ<b>.</b></a>
+  <div class="menu" id="menu">
+    <a href="#about">من نحن</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#work">أعمالنا</a>
+    <a href="#reviews">العملاء</a>
+    <a href="https://wa.me/966504740337" class="nbtn">اطلب عرض سعر</a>
+  </div>
+  <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+</div></nav>
+
+<header class="hero" id="home">
+  <div class="bgimg"><img src="island.jpg" alt="مطبخ من تصنيع شيخ المطابخ"></div>
+  <div class="wrap">
+    <span class="ey rv">مصنع وتفصيل مطابخ · خميس مشيط وأبها</span>
+    <h1 class="rv d1">مطبخك يبدأ<br>من <span class="ac">مصنعنا</span></h1>
+    <p class="sub rv d2">نصمّم ونصنّع ونركّب مطابخ الخشب والألمنيوم والأكريليك في مصانعنا، بجودةٍ عالية وفريقٍ فنّي محترف ثقة بها أكثر من خمسمئة عميل.</p>
+    <div class="hcta rv d3">
+      <a href="https://wa.me/966504740337" class="btn btn-p">صمّم مطبخك</a>
+      <a href="#work" class="btn btn-o">شاهد أعمالنا</a>
+      <span class="hrate"><b>4.9</b><span class="stars">★★★★★</span> من 544 تقييماً</span>
+    </div>
+  </div>
+</header>
+
+<div class="tags"><div class="wrap">
+  <span>مطابخ خشب</span>
+  <span>مطابخ ألمنيوم</span>
+  <span>أكريليك وبولي لاك</span>
+  <span>تصنيع في مصانعنا</span>
+  <span>تركيب وصيانة</span>
+</div></div>
+
+<section id="about" class="about"><div class="wrap">
+  <div class="agrid">
+    <div class="aimg rv"><img src="showroom.jpg" alt="معرض شيخ المطابخ"></div>
+    <div class="rv d1">
+      <span class="ey">من نحن</span>
+      <h2 class="disp" style="font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0 18px">صناعةٌ محلية<br>تصنع الفرق</h2>
+      <p class="lead">«شيخ المطابخ» مصنع متخصّص في تفصيل وتصنيع المطابخ، نخدم خميس مشيط وأبها عبر عدّة معارض وفروع.</p>
+      <p class="body">نملك خطّ التصنيع كاملاً، من التصميم والقياس حتى التصنيع في مصانعنا والتركيب والصيانة، مما يضمن جودة ثابتة وأسعاراً تنافسية. يصفنا عملاؤنا بالشغل بذمّة وأمانة، والترتيب، والنظافة بعد التركيب، ودقّة المواعيد.</p>
+      <ul class="alist">
+        <li>تصنيع داخلي في مصانعنا الخاصة</li>
+        <li>عدّة معارض في خميس مشيط وأبها</li>
+        <li>فريق تركيب وصيانة محترف</li>
+      </ul>
+      <p class="sig">من المصنع إلى مطبخك مباشرة.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="shead ctr rv">
+    <span class="ey">خدماتنا</span>
+    <h2>كل ما يخصّ مطبخك</h2>
+    <p>من التصميم إلى الصيانة، تحت سقفٍ واحد.</p>
+  </div>
+  <div class="sgrid">
+    <div class="scard rv"><div class="ic">◳</div><h3>مطابخ خشب</h3><p>تفصيل مطابخ خشبية بخامات متينة وتصاميم دافئة تدوم طويلاً.</p></div>
+    <div class="scard rv d1"><div class="ic">▦</div><h3>مطابخ ألمنيوم</h3><p>مطابخ ألمنيوم عملية ومقاومة للرطوبة بتشطيب أنيق.</p></div>
+    <div class="scard rv d2"><div class="ic">◧</div><h3>أكريليك وبولي لاك</h3><p>واجهات أكريليك وبولي لاك بلمعةٍ فاخرة وألوان عصرية.</p></div>
+    <div class="scard rv"><div class="ic">▤</div><h3>تصميم وقياس</h3><p>زيارة ميدانية للقياس وتصميم يناسب مساحتك واحتياجك.</p></div>
+    <div class="scard rv d1"><div class="ic">⚙</div><h3>تصنيع في مصانعنا</h3><p>تصنيع داخلي يضمن جودة ثابتة وتحكّماً كاملاً في التفاصيل.</p></div>
+    <div class="scard rv d2"><div class="ic">✦</div><h3>تركيب وصيانة</h3><p>فريق فنّي محترف للتركيب الدقيق وخدمات الصيانة بعد البيع.</p></div>
+  </div>
+</div></section>
+
+<section id="work" class="work"><div class="wrap">
+  <div class="shead rv">
+    <span class="ey">أعمالنا ومعارضنا</span>
+    <h2>صناعةٌ نفخر بها</h2>
+    <p>نماذج من مطابخنا ومعارضنا في خميس مشيط وأبها.</p>
+  </div>
+  <div class="pgrid">
+    <div class="pitem big rv" data-t="مطبخ بجزيرة وسطية"><img src="island.jpg" alt="مطبخ جزيرة"></div>
+    <div class="pitem tall rv d1" data-t="مطبخ بخزائن وأجهزة مدمجة"><img src="kitchen.jpg" alt="مطبخ"></div>
+    <div class="pitem wide rv d2" data-t="معرض شيخ المطابخ"><img src="showroom.jpg" alt="معرض"></div>
+    <div class="pitem rv d1" data-t="أحد فروعنا"><img src="front-night.jpg" alt="فرع"></div>
+    <div class="pitem rv d2" data-t="معرض الفرع الرئيسي"><img src="front-day.jpg" alt="فرع"></div>
+  </div>
+</div></section>
+
+<div class="stbar"><div class="wrap">
+  <div class="st rv"><b>4.9</b><span>تقييم خرائط Google</span></div>
+  <div class="st rv d1"><b>544</b><span>تقييم موثّق</span></div>
+  <div class="st rv d2"><b>عدة فروع</b><span>خميس مشيط وأبها</span></div>
+  <div class="st rv d3"><b>مصنع</b><span>تصنيع داخلي</span></div>
+</div></div>
+
+<section id="reviews" class="rev"><div class="wrap">
+  <div class="shead ctr rv">
+    <span class="ey">آراء عملائنا</span>
+    <h2>ثقةٌ من مئات العملاء</h2>
+    <p>تقييم 4.9 من 5 على خرائط Google من 544 عميلاً.</p>
+  </div>
+  <div class="rgrid">
+    <div class="rcard rv"><div class="st-row">★★★★★</div><p>احترافية في التعامل ودقّة المواعيد وفريق فنّي محترف في التركيب، متميّزين جداً، مع الشكر للأستاذ عبدالحكيم وفريق التركيب.</p><div class="who"><div class="av">ي</div><div><b>م. يحيى القحطاني</b><span>Local Guide · خرائط Google</span></div></div></div>
+    <div class="rcard rv d1"><div class="st-row">★★★★★</div><p>تعامل ممتاز مع شيخ المطابخ وسرعة في التنفيذ، وأشكر الأخ عبدالحكيم على حسن ورقيّ التعامل واقتراحاته الجميلة.</p><div class="who"><div class="av">ر</div><div><b>رياض القحطاني</b><span>Local Guide · خرائط Google</span></div></div></div>
+    <div class="rcard rv d2"><div class="st-row">★★★★★</div><p>كل الشكر والتقدير، الشباب ما قصّروا بيّض الله وجوههم، والتجربة مع شيخ المطابخ مميّزة.</p><div class="who"><div class="av">س</div><div><b>سعد الساهر</b><span>عميل · خرائط Google</span></div></div></div>
+  </div>
+</div></section>
+
+<section id="contact" class="cta"><div class="wrap"><div class="rv">
+  <span class="ey" style="color:var(--amber)">لنبدأ</span>
+  <h2>مطبخك من المصنع مباشرة</h2>
+  <p>تواصل معنا اليوم لزيارة أحد معارضنا أو طلب قياس وعرض سعر، ودعنا نصنع لك مطبخاً يدوم.</p>
+  <div class="hcta">
+    <a href="https://wa.me/966504740337" class="btn btn-p">واتساب مباشر</a>
+    <a href="tel:+966504740337" class="btn btn-o">اتصل: 050 474 0337</a>
+  </div>
+  <div class="cinfo">
+    <div><span class="lab">الموقع</span><span class="val">خميس مشيط · مدينة البناء · وفروع أبها</span></div>
+    <div><span class="lab">الهاتف</span><span class="val">050 474 0337</span></div>
+    <div><span class="lab">أوقات العمل</span><span class="val">يومياً من 9 صباحاً</span></div>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">
+  <div class="fbrand">شيخ المطابخ<b>.</b></div>
+  <div class="meta">مصنع وتفصيل مطابخ خشب وألمنيوم وأكريليك · خميس مشيط وأبها، المملكة العربية السعودية</div>
+  <div class="fsig">صُمّم بعناية · <a href="https://wa.me/966505989304" target="_blank" rel="noopener">designed by ali</a></div>
+</div></footer>
+
+<a class="wa" href="https://wa.me/966504740337" aria-label="واتساب"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.488-.917zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+
+<script>
+(function(){
+  function hidePre(){var p=document.getElementById('pre');if(p)p.classList.add('done');}
+  window.addEventListener('load',function(){setTimeout(hidePre,650);});
+  setTimeout(hidePre,3500);
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){if(window.scrollY>40)nav.classList.add('scz');else nav.classList.remove('scz');});
+  var burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  if(!burger){burger=document.createElement('button');burger.className='burger';burger.id='burger';burger.innerHTML='<span></span><span></span><span></span>';var nw=document.querySelector('.nav .wrap');if(nw)nw.appendChild(burger);}
+  if(burger&&menu){
+    burger.addEventListener('click',function(){menu.classList.toggle('open');});
+    menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+  }
+  var rvs=[].slice.call(document.querySelectorAll('.rv'));
+  function reveal(el){el.classList.add('in');}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    rvs.forEach(function(el){io.observe(el);});
+  }else{rvs.forEach(reveal);}
+  function safety(){var h=window.innerHeight;rvs.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<h*0.95)reveal(el);});}
+  window.addEventListener('scroll',safety);safety();
+  setTimeout(function(){rvs.forEach(function(el){el.style.transition='none';el.classList.add('in');el.style.opacity='1';el.style.transform='none';});},2800);
+})();
+</script>
+</body>
+</html>
